@@ -134,4 +134,4 @@ El sitio soporta dos idiomas:
 ## 📄 Licencia
 
 © 2025 KelceTS Business School. Todos los derechos reservados.
-Parte del Grupo Kelset.
+Parte del Grupo Kelset.# Update timestamp: Sun Jul  6 15:32:25 UTC 2025
