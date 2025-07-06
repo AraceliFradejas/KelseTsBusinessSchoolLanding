@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KelceTS Business School - Vista Previa del Diseño</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-preview {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #1e40af;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+        .hero-preview {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 12px;
+        }
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .video-placeholder {
+            background: rgba(255,255,255,0.2);
+            border: 2px dashed rgba(255,255,255,0.5);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .program-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .program-level {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .executive { background: #fef3c7; color: #92400e; }
+        .intermediate { background: #dbeafe; color: #1e40af; }
+        .beginner { background: #d1fae5; color: #065f46; }
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        .testimonial-preview {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .form-preview {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+        }
+        .footer-preview {
+            background: #1f2937;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+            border: none;
+        }
+        .btn-secondary {
+            background: white;
+            color: #3b82f6;
+            border: 2px solid #3b82f6;
+        }
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .image-placeholder {
+            background: #e5e7eb;
+            border: 2px dashed #9ca3af;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            color: #6b7280;
+            margin: 15px 0;
+        }
+        @media (max-width: 768px) {
+            .about-layout, .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-selector">
+        🌐 EN | ES
+    </div>
+
+    <div class="preview-container">
+        <h1 style="text-align: center; color: #1e40af; font-size: 36px; margin-bottom: 40px;">
+            🎓 KelceTS Business School - Vista Previa del Diseño
+        </h1>
+
+        <!-- NAVBAR PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">🧭 1. NAVBAR (Header Fijo)</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.95); padding: 15px 20px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                <div style="font-weight: bold; color: #1e40af;">🏫 KelceTS Business School</div>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <span>Home</span>
+                    <span>Programs</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                    <span>🌐 EN/ES</span>
+                    <button class="btn btn-primary">Kelset Group</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">🎬 2. HERO SECTION (Pantalla Completa)</div>
+            <div class="hero-preview">
+                <div class="hero-title">Master AI for Business Excellence</div>
+                <div class="hero-subtitle">Leading Business School specialized in AI applications</div>
+                <p>Transform your career and business with cutting-edge AI education. Join the leaders of tomorrow at KelceTS Business School.</p>
+                
+                <div class="video-placeholder">
+                    <div style="font-size: 64px;">▶️</div>
+                    <h3>ESPACIO PARA VIDEO PROMOCIONAL</h3>
+                    <p>Aquí irá tu video hero principal</p>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary">Explore Programs</button>
+                    <button class="btn btn-primary">Watch Video</button>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
+                    <div><strong>500+</strong><br>Graduates</div>
+                    <div><strong>15+</strong><br>Partners</div>
+                    <div><strong>95%</strong><br>Success Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FEATURES PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">✨ 3. FEATURES SECTION</div>
+            <h2 style="text-align: center;">Why Choose KelceTS Business School?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI-Focused Curriculum</h3>
+                    <p>Comprehensive programs designed specifically for AI applications in business environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Industry Experts</h3>
+                    <p>Learn from leading AI practitioners and business professionals with real-world experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Practical Learning</h3>
+                    <p>Hands-on projects and case studies that prepare you for immediate implementation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Global Network</h3>
+                    <p>Connect with AI professionals and business leaders from around the world.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGRAMS PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">📚 4. PROGRAMS SECTION</div>
+            <h2 style="text-align: center;">Our AI Business Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <span class="program-level executive">Executive</span>
+                    <h3>AI Strategy for Executives</h3>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <p>Strategic AI implementation for C-level executives and senior managers.</p>
+                    <ul>
+                        <li>✓ AI Strategy Development</li>
+                        <li>✓ ROI Analysis</li>
+                        <li>✓ Change Management</li>
+                        <li>✓ Risk Assessment</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <span class="program-level intermediate">Intermediate</span>
+                    <h3>Machine Learning for Business</h3>
+                    <p><strong>Duration:</strong> 12 weeks</p>
+                    <p>Practical machine learning applications for business professionals.</p>
+                    <ul>
+                        <li>✓ Data Analysis</li>
+                        <li>✓ Predictive Models</li>
+                        <li>✓ Business Intelligence</li>
+                        <li>✓ Automation Tools</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <span class="program-level beginner">Beginner</span>
+                    <h3>AI Innovation Workshop</h3>
+                    <p><strong>Duration:</strong> 4 weeks</p>
+                    <p>Introduction to AI innovations and their business applications.</p>
+                    <ul>
+                        <li>✓ AI Fundamentals</li>
+                        <li>✓ Use Cases</li>
+                        <li>✓ Technology Trends</li>
+                        <li>✓ Implementation Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">🏢 5. ABOUT SECTION</div>
+            <div class="about-layout">
+                <div>
+                    <h2>About KelceTS Business School</h2>
+                    <h3 style="color: #3b82f6;">Pioneering AI Education for Business Excellence</h3>
+                    <p>Founded with the vision of bridging the gap between artificial intelligence technology and business applications, KelceTS Business School has become the premier destination for professionals seeking to master AI in business contexts.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div>Graduates</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div>Partners</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">95%</div>
+                            <div>Job Placement</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4.9/5</div>
+                            <div>Student Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="image-placeholder">
+                        <h4>ESPACIO PARA IMAGEN PRINCIPAL</h4>
+                        <p>Foto del equipo o campus</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px;">
+                        <div style="background: #ddd; aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px;">Career 1</div>
+                        <div style="background: #ddd; aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px;">Career 2</div>
+                        <div style="background: #ddd; aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px;">Career 3</div>
+                    </div>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px;">↑ Tus imágenes de careers ya integradas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIALS PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">💬 6. TESTIMONIALS SECTION</div>
+            <h2 style="text-align: center;">What Our Students Say</h2>
+            <div class="testimonial-preview">
+                <div style="font-size: 24px; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <blockquote style="font-size: 20px; font-style: italic; margin-bottom: 20px;">
+                    "The AI Strategy program transformed how we approach technology in our organization. The practical insights were immediately applicable."
+                </blockquote>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                    <div class="image-placeholder" style="width: 60px; height: 60px; border-radius: 50%; margin: 0;">👤</div>
+                    <div>
+                        <strong>Sarah Johnson</strong><br>
+                        <small>AI Director, TechCorp</small>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; font-size: 14px; color: #666;">
+                    ← → Navegación con carrusel | ● ● ● Indicadores
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">📞 7. CONTACT SECTION</div>
+            <h2 style="text-align: center;">Ready to Transform Your Business with AI?</h2>
+            <div class="contact-layout">
+                <div>
+                    <h3>Get in Touch</h3>
+                    <div style="margin: 20px 0;">
+                        <p><strong>📍 Address:</strong> 123 AI Innovation Drive, Tech District, NY 10001</p>
+                        <p><strong>📞 Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong>📧 Email:</strong> admissions@kelscts.edu</p>
+                    </div>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                        Saturday: 10:00 AM - 4:00 PM EST<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="form-preview">
+                    <h3>Send us a Message</h3>
+                    <div style="display: grid; gap: 15px;">
+                        <input type="text" placeholder="Full Name" style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                        <input type="email" placeholder="Email Address" style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                        <select style="padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                            <option>Select a program</option>
+                            <option>AI Strategy for Executives</option>
+                            <option>Machine Learning for Business</option>
+                            <option>AI Innovation Workshop</option>
+                        </select>
+                        <textarea placeholder="Tell us about your goals..." style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; height: 100px; resize: none;"></textarea>
+                        <button class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PREVIEW -->
+        <div class="section-preview">
+            <div class="section-title">🦶 8. FOOTER COMPLETO</div>
+            <div class="footer-preview">
+                <div class="footer-grid">
+                    <div>
+                        <h3>🏫 KelceTS Business School</h3>
+                        <p>Leading the future of AI education for business professionals worldwide.</p>
+                        <div style="margin: 15px 0;">
+                            <a href="https://kelset-slanding.vercel.app/" style="color: #60a5fa; font-weight: bold;">
+                                🔗 Parte del Grupo Kelset ↗
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Programs</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>AI Strategy for Executives</li>
+                            <li>Machine Learning for Business</li>
+                            <li>AI Innovation Workshop</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Company</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>About Us</li>
+                            <li>Admissions</li>
+                            <li>Careers</li>
+                            <li>News</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe to our newsletter</p>
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <input type="email" placeholder="Enter your email" style="flex: 1; padding: 8px; border-radius: 4px; border: 1px solid #555;">
+                            <button class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #374151;">
+                    <p>© 2025 KelceTS Business School. All rights reserved.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="margin: 0 10px;">📱 LinkedIn</span>
+                        <span style="margin: 0 10px;">🐦 Twitter</span>
+                        <span style="margin: 0 10px;">📺 YouTube</span>
+                        <span style="margin: 0 10px;">📷 Instagram</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; border-radius: 12px;">
+            <h2>🚀 ¡Landing Page Lista!</h2>
+            <p style="font-size: 18px;">Accede a la versión interactiva completa en:</p>
+            <p style="font-size: 20px; font-weight: bold;">
+                🌍 https://scaling-potato-pjq695x554f7jw-3000.app.github.dev/
+            </p>
+            <p>✨ Multiidioma | 📱 Responsive | 🎬 Espacios para video | 🖼️ Tus imágenes integradas</p>
+        </div>
+    </div>
+</body>
+</html>
