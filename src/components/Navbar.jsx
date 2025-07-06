@@ -122,7 +122,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary text-sm"
             >
-              Kelset Group
+              Kelse TS Group
             </motion.a>
           </div>
 
@@ -194,7 +194,7 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     className="block mt-4 btn-primary text-center text-sm"
                   >
-                    Kelset Group
+                    Kelse TS Group
                   </motion.a>
                 </div>
               </div>

@@ -6,6 +6,12 @@ import { FiClock, FiUser, FiCheck, FiArrowRight } from 'react-icons/fi';
 const Programs = () => {
   const { t } = useTranslation();
 
+  const programImages = [
+    '/assets/ktsbs6.png',
+    '/assets/ktsbs7.png',
+    '/assets/ktsbs8.png'
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -76,8 +82,18 @@ const Programs = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="card p-8 relative overflow-hidden group"
             >
+              {/* Program Image */}
+              <div className="relative mb-6 overflow-hidden rounded-lg">
+                <img 
+                  src={programImages[index % programImages.length]} 
+                  alt={program.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+
               {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-300 opacity-30"></div>
               
               <div className="relative z-10">
                 {/* Header */}

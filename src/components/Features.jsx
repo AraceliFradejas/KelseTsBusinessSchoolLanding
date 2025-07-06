@@ -1,12 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FiCpu, FiUsers, FiTarget, FiGlobe } from 'react-icons/fi';
 
 const Features = () => {
   const { t } = useTranslation();
 
-  const icons = [FiCpu, FiUsers, FiTarget, FiGlobe];
+  const featureImages = [
+    '/assets/ktsbs2.png',
+    '/assets/ktsbs3.png', 
+    '/assets/ktsbs4.png',
+    '/assets/ktsbs5.png'
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -56,7 +60,6 @@ const Features = () => {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {t('features.items', { returnObjects: true }).map((feature, index) => {
-            const IconComponent = icons[index];
             return (
               <motion.div
                 key={index}
@@ -65,10 +68,14 @@ const Features = () => {
                 className="card p-8 text-center group"
               >
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl mb-6 text-white group-hover:shadow-lg transition-shadow"
+                  whileHover={{ scale: 1.1 }}
+                  className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl mb-6 overflow-hidden group-hover:shadow-lg transition-shadow"
                 >
-                  <IconComponent className="w-8 h-8" />
+                  <img 
+                    src={featureImages[index]} 
+                    alt={feature.title}
+                    className="w-full h-full object-cover"
+                  />
                 </motion.div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">

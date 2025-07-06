@@ -157,7 +157,7 @@ const resources = {
           button: 'Subscribe'
         },
         copyright: '© 2025 KelceTS Business School. All rights reserved.',
-        parentCompany: 'Part of Kelset Group'
+        parentCompany: 'Part of Kelse TS Group'
       }
     }
   },
@@ -314,7 +314,7 @@ const resources = {
           button: 'Suscribirse'
         },
         copyright: '© 2025 KelceTS Business School. Todos los derechos reservados.',
-        parentCompany: 'Parte del Grupo Kelset'
+        parentCompany: 'Parte del Grupo Kelse TS'
       }
     }
   }

@@ -125,15 +125,11 @@ const About = () => {
                 whileHover={{ scale: 1.02 }}
                 className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
               >
-                <div className="image-placeholder h-full">
-                  <div className="text-center">
-                    <FiUsers className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-                    <p className="text-lg font-medium text-gray-600 mb-2">About Image</p>
-                    <p className="text-sm text-gray-500 max-w-xs mx-auto">
-                      {t('about.imagePlaceholder')}
-                    </p>
-                  </div>
-                </div>
+                <img 
+                  src="/assets/ktsbs0.png"
+                  alt="KelceTS Business School"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
               
               {/* Floating Card 1 */}
