@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FiBrain, FiUsers, FiTarget, FiGlobe } from 'react-icons/fi';
+import { FiCpu, FiUsers, FiTarget, FiGlobe } from 'react-icons/fi';
 
 const Features = () => {
   const { t } = useTranslation();
 
-  const icons = [FiBrain, FiUsers, FiTarget, FiGlobe];
+  const icons = [FiCpu, FiUsers, FiTarget, FiGlobe];
 
   const containerVariants = {
     hidden: { opacity: 0 },

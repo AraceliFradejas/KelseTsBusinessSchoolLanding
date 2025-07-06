@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronLeft, FiChevronRight, FiStar, FiQuote } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiStar, FiMessageCircle } from 'react-icons/fi';
 
 const Testimonials = () => {
   const { t } = useTranslation();
@@ -98,7 +98,7 @@ const Testimonials = () => {
                     transition={{ delay: 0.2, duration: 0.5 }}
                     className="absolute top-8 left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
                   >
-                    <FiQuote className="w-6 h-6 text-primary-600" />
+                    <FiMessageCircle className="w-6 h-6 text-primary-600" />
                   </motion.div>
 
                   <div className="relative z-10 text-center">
