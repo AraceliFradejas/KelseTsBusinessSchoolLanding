@@ -56,30 +56,56 @@ export default function handler(req, res) {
 
 async function generateBadgeImage(imageUrl, res) {
   try {
-    // SVG chapita con imagen real como background
+    // Crear una chapita simple con CSS embebido que funcione en todos los navegadores
     const size = 128;
     const borderWidth = 4;
     
-    const svgBadge = `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    // Crear HTML con CSS que se puede convertir a imagen
+    const htmlBadge = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    .badge {
+      width: ${size}px;
+      height: ${size}px;
+      border-radius: 50%;
+      border: ${borderWidth}px solid;
+      border-image: linear-gradient(45deg, #dc2626, #f59e0b) 1;
+      background-image: url('${imageUrl}');
+      background-size: cover;
+      background-position: center 20%;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+    .badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(220, 38, 38, 0.1), rgba(245, 158, 11, 0.1));
+    }
+  </style>
+</head>
+<body>
+  <div class="badge"></div>
+</body>
+</html>`;
+
+    // En lugar de HTML, vamos a usar un SVG más simple
+    const svgBadge = `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="circleClip">
-      <circle cx="${size/2}" cy="${size/2}" r="${(size/2) - borderWidth}"/>
-    </clipPath>
-    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
-    </linearGradient>
+    <pattern id="img" patternUnits="userSpaceOnUse" width="${size-8}" height="${size-8}">
+      <image href="${imageUrl}" x="0" y="-10" width="${size-8}" height="${size-8}" preserveAspectRatio="xMidYMid slice"/>
+    </pattern>
   </defs>
-  
-  <!-- Background circle -->
-  <circle cx="${size/2}" cy="${size/2}" r="${(size/2) - borderWidth}" fill="#f3f4f6"/>
-  
-  <!-- Image -->
-  <image href="${imageUrl}" x="${borderWidth}" y="${borderWidth}" width="${size - borderWidth*2}" height="${size - borderWidth*2}" clip-path="url(#circleClip)" preserveAspectRatio="xMidYMid slice" />
-  
-  <!-- Border -->
-  <circle cx="${size/2}" cy="${size/2}" r="${(size/2) - borderWidth/2}" fill="none" stroke="url(#borderGradient)" stroke-width="${borderWidth}"/>
+  <circle cx="${size/2}" cy="${size/2}" r="${(size/2)-4}" fill="url(#img)"/>
+  <circle cx="${size/2}" cy="${size/2}" r="${(size/2)-2}" fill="none" stroke="#dc2626" stroke-width="4"/>
 </svg>`;
 
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -89,6 +115,12 @@ async function generateBadgeImage(imageUrl, res) {
     
   } catch (error) {
     console.error('Error generating badge:', error);
-    res.status(500).json({ error: 'Error generating badge image' });
+    // Fallback: devolver un SVG simple sin imagen
+    const fallbackSvg = `<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="64" cy="64" r="60" fill="#f3f4f6" stroke="#dc2626" stroke-width="4"/>
+  <text x="64" y="70" text-anchor="middle" font-family="Arial" font-size="14" fill="#374151">Staff</text>
+</svg>`;
+    res.setHeader('Content-Type', 'image/svg+xml');
+    res.status(200).send(fallbackSvg);
   }
 }
