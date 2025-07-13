@@ -133,6 +133,31 @@ const resources = {
           email: 'admissions@kelscts.edu'
         }
       },
+      // Team Section
+      team: {
+        badge: 'Our Team',
+        title: 'Meet Our Professional Team',
+        description: 'Our experienced leadership team brings decades of expertise in AI, business strategy, and education to drive innovation and excellence.',
+        members: {
+          ceo: {
+            title: 'Chief Executive Officer'
+          },
+          cio: {
+            title: 'Chief Information Officer'
+          },
+          chro: {
+            title: 'Chief Human Resources Officer'
+          },
+          cco: {
+            title: 'Chief Commercial Officer'
+          }
+        },
+        cta: {
+          title: 'Ready to Learn from the Best?',
+          description: 'Join thousands of professionals who have transformed their careers with our AI education programs.',
+          button: 'Get Started Today'
+        }
+      },
       // Footer
       footer: {
         description: 'Leading the future of AI education for business professionals worldwide.',
@@ -288,6 +313,31 @@ const resources = {
           address: '123 AI Innovation Drive, Distrito Tecnológico, NY 10001',
           phone: '+1 (555) 123-4567',
           email: 'admisiones@kelscts.edu'
+        }
+      },
+      // Team Section
+      team: {
+        badge: 'Nuestro Equipo',
+        title: 'Conoce Nuestro Equipo Profesional',
+        description: 'Nuestro experimentado equipo de liderazgo aporta décadas de experiencia en IA, estrategia empresarial y educación para impulsar la innovación y la excelencia.',
+        members: {
+          ceo: {
+            title: 'Director Ejecutivo'
+          },
+          cio: {
+            title: 'Director de Información'
+          },
+          chro: {
+            title: 'Director de Recursos Humanos'
+          },
+          cco: {
+            title: 'Director Comercial'
+          }
+        },
+        cta: {
+          title: '¿Listo para Aprender de los Mejores?',
+          description: 'Únete a miles de profesionales que han transformado sus carreras con nuestros programas de educación en IA.',
+          button: 'Comienza Hoy'
         }
       },
       // Footer

@@ -10,6 +10,7 @@ import Programs from './components/Programs';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Team from './components/Team';
 import Footer from './components/Footer';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <About />
               <Testimonials />
               <Contact />
+              <Team />
             </main>
           } />
         </Routes>
