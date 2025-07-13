@@ -8,28 +8,28 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Sarah Johnson',
+      name: 'T.A.S.',
       title: 'CEO',
       image: '/assets/ktsbs_staff_CEO.png',
       titleKey: 'team.members.ceo.title'
     },
     {
       id: 2,
-      name: 'Michael Chen',
+      name: 'T.M.K.',
       title: 'CIO', 
       image: '/assets/ktsbs_staff_CIO.png',
       titleKey: 'team.members.cio.title'
     },
     {
       id: 3,
-      name: 'Emma Rodriguez',
+      name: 'J.D.K.',
       title: 'CHRO',
       image: '/assets/ktsbs_staff_CHRO.png', 
       titleKey: 'team.members.chro.title'
     },
     {
       id: 4,
-      name: 'David Kim',
+      name: 'A.K.S.',
       title: 'CCO',
       image: '/assets/ktsbs_staff_CCO.webp',
       titleKey: 'team.members.cco.title'
