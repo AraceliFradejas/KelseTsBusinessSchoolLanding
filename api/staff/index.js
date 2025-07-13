@@ -14,7 +14,7 @@ export default function handler(req, res) {
   }
 
   if (req.method === 'GET') {
-    const baseUrl = req.headers.host ? `https://${req.headers.host}` : 'https://kelse-ts-business-school-landing.vercel.app';
+    const baseUrl = 'https://kelse-ts-business-school-landing.vercel.app';
     
     const staffMembers = [
       {
