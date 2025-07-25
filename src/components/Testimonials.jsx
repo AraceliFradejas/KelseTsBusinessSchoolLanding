@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiStar, FiMessageCircle } from 'react-icons/fi';
@@ -6,8 +6,40 @@ import { FiChevronLeft, FiChevronRight, FiStar, FiMessageCircle } from 'react-ic
 const Testimonials = () => {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [userAvatars, setUserAvatars] = useState([]);
   
   const testimonials = t('testimonials.items', { returnObjects: true });
+
+  // Generate random user avatars
+  useEffect(() => {
+    const generateAvatars = async () => {
+      try {
+        // Create diverse professional-looking avatars
+        const genders = ['female', 'male', 'female'];
+        const nationalities = ['us', 'gb', 'ca']; // US, UK, Canada for professional look
+        
+        const avatarPromises = genders.map((gender, index) => 
+          fetch(`https://randomuser.me/api/?gender=${gender}&nat=${nationalities[index]}&inc=picture&seed=kelsects${index}`)
+        );
+
+        const responses = await Promise.all(avatarPromises);
+        const userData = await Promise.all(responses.map(res => res.json()));
+        
+        const avatars = userData.map(data => data.results[0].picture.large);
+        setUserAvatars(avatars);
+      } catch (error) {
+        console.log('Error loading avatars, using fallback');
+        // Fallback to local assets if API fails
+        setUserAvatars([
+          '/assets/ktsbs_staff_CEO.png',
+          '/assets/ktsbs_staff_CIO.png', 
+          '/assets/ktsbs_staff_CCO.webp'
+        ]);
+      }
+    };
+
+    generateAvatars();
+  }, []);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -128,10 +160,28 @@ const Testimonials = () => {
                       transition={{ delay: 0.5 }}
                       className="flex items-center justify-center space-x-4"
                     >
-                      <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">
-                          {testimonials[currentIndex].image}
-                        </span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center shadow-lg">
+                        {userAvatars.length > 0 && userAvatars[currentIndex] ? (
+                          <img 
+                            src={userAvatars[currentIndex]} 
+                            alt={testimonials[currentIndex].name}
+                            className="w-full h-full object-cover"
+                            style={{
+                              objectPosition: 'center 30%'
+                            }}
+                            onError={(e) => {
+                              // Fallback if image fails to load
+                              e.target.style.display = 'none';
+                              e.target.nextSibling.style.display = 'flex';
+                            }}
+                          />
+                        ) : null}
+                        <div 
+                          className="w-full h-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-lg"
+                          style={{ display: userAvatars.length > 0 ? 'none' : 'flex' }}
+                        >
+                          {testimonials[currentIndex].name.charAt(0)}
+                        </div>
                       </div>
                       <div className="text-left">
                         <h4 className="font-semibold text-gray-900 text-lg">
@@ -209,8 +259,28 @@ const Testimonials = () => {
               </p>
               
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-500 text-xs">IMG</span>
+                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center shadow-md overflow-hidden">
+                  {userAvatars.length > 0 && userAvatars[index] ? (
+                    <img 
+                      src={userAvatars[index]} 
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                      style={{
+                        objectPosition: 'center 30%'
+                      }}
+                      onError={(e) => {
+                        // Fallback if image fails to load
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  <div 
+                    className="w-full h-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-xs"
+                    style={{ display: userAvatars.length > 0 ? 'none' : 'flex' }}
+                  >
+                    {testimonial.name.charAt(0)}
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">
