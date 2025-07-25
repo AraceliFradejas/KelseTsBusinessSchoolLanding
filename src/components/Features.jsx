@@ -100,7 +100,7 @@ const Features = () => {
                       className="text-sm text-primary-600 mt-1 flex items-center gap-1 font-medium"
                       animate={{ rotate: isExpanded ? 180 : 0 }}
                     >
-                      <span>{isExpanded ? 'Contraer' : 'Ver más'}</span>
+                      <span>{isExpanded ? t('features.collapseText') : t('features.expandText')}</span>
                       <motion.span
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.3 }}

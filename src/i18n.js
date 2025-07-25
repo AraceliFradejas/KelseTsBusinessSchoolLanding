@@ -27,6 +27,8 @@ const resources = {
       features: {
         title: 'Why Choose KelceTS Business School?',
         subtitle: 'We specialize exclusively in AI education for business applications',
+        expandText: 'Show more',
+        collapseText: 'Show less',
         items: [
           {
             title: 'AI-Focused Curriculum',
@@ -209,6 +211,8 @@ const resources = {
       features: {
         title: '¿Por qué elegir KelceTS Business School?',
         subtitle: 'Nos especializamos exclusivamente en educación de IA para aplicaciones empresariales',
+        expandText: 'Ver más',
+        collapseText: 'Contraer',
         items: [
           {
             title: 'Currículo Enfocado en IA',
