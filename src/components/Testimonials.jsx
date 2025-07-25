@@ -10,16 +10,19 @@ const Testimonials = () => {
   
   const testimonials = t('testimonials.items', { returnObjects: true });
 
-  // Generate random user avatars
+  // Generate random user avatars matching testimonial names
   useEffect(() => {
     const generateAvatars = async () => {
       try {
-        // Create diverse professional-looking avatars
-        const genders = ['female', 'male', 'female'];
-        const nationalities = ['us', 'gb', 'ca']; // US, UK, Canada for professional look
+        // Match gender with testimonial names: Sarah (F), Michael (M), Maria (F)
+        const avatarConfigs = [
+          { gender: 'female', seed: 'sarahjohnson2025', nat: 'us' },    // Sarah Johnson
+          { gender: 'male', seed: 'michaelchen2025', nat: 'us' },      // Michael Chen  
+          { gender: 'female', seed: 'mariarodriguez2025', nat: 'us' }  // Maria Rodriguez
+        ];
         
-        const avatarPromises = genders.map((gender, index) => 
-          fetch(`https://randomuser.me/api/?gender=${gender}&nat=${nationalities[index]}&inc=picture&seed=kelsects${index}`)
+        const avatarPromises = avatarConfigs.map(config => 
+          fetch(`https://randomuser.me/api/?gender=${config.gender}&nat=${config.nat}&inc=picture&seed=${config.seed}`)
         );
 
         const responses = await Promise.all(avatarPromises);
@@ -29,11 +32,11 @@ const Testimonials = () => {
         setUserAvatars(avatars);
       } catch (error) {
         console.log('Error loading avatars, using fallback');
-        // Fallback to local assets if API fails
+        // Fallback to local assets if API fails (matching genders)
         setUserAvatars([
-          '/assets/ktsbs_staff_CEO.png',
-          '/assets/ktsbs_staff_CIO.png', 
-          '/assets/ktsbs_staff_CCO.webp'
+          '/assets/ktsbs_staff_CHRO.png',  // Female for Sarah Johnson
+          '/assets/ktsbs_staff_CEO.png',   // Male for Michael Chen
+          '/assets/ktsbs_staff_CCO.webp'   // Female for Maria Rodriguez
         ]);
       }
     };
