@@ -89,14 +89,15 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <motion.button
+              <motion.a
+                href="#programs"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary flex items-center justify-center space-x-2 group"
               >
                 <span>{t('hero.ctaPrimary')}</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              </motion.a>
 
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
