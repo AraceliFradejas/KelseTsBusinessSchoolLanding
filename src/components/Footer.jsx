@@ -24,15 +24,79 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-0 pb-16 relative overflow-hidden">
       {/* Franja naranjita de redes sociales */}
-      <div className="w-full bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 py-4 flex flex-col md:flex-row items-center justify-center gap-4 shadow-lg z-20">
-        <span className="font-bold text-white text-lg tracking-wide mr-4">Síguenos:</span>
-        <div className="flex gap-3">
-          <a href="https://linkedin.com/in/araceli-fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="LinkedIn"><FiLinkedin className="w-5 h-5" /></a>
-          <a href="https://twitter.com/araceli_fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Twitter"><FiTwitter className="w-5 h-5" /></a>
-          <a href="https://instagram.com/araceli.fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Instagram"><FiInstagram className="w-5 h-5" /></a>
-          <a href="https://youtube.com/@aracelif" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="YouTube"><FiYoutube className="w-5 h-5" /></a>
-          <a href="https://github.com/AraceliFradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="GitHub"><FiGithub className="w-5 h-5" /></a>
-          <a href="https://kelset-slanding.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Web"><FiExternalLink className="w-5 h-5" /></a>
+      <div className="w-full bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 py-6 shadow-lg border-b-4 border-orange-300">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-center gap-6">
+          <h3 className="font-bold text-white text-xl tracking-wide flex items-center gap-2">
+            <span>🌟</span> Conecta conmigo <span>🌟</span>
+          </h3>
+          <div className="flex gap-4">
+            <motion.a
+              href="https://linkedin.com/in/araceli-fradejas"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-orange-600 hover:bg-orange-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="LinkedIn"
+            >
+              <FiLinkedin className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              href="https://twitter.com/araceli_fradejas"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-blue-600 hover:bg-blue-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="Twitter"
+            >
+              <FiTwitter className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              href="https://instagram.com/araceli.fradejas"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-pink-600 hover:bg-pink-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="Instagram"
+            >
+              <FiInstagram className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              href="https://youtube.com/@aracelif"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-red-600 hover:bg-red-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="YouTube"
+            >
+              <FiYoutube className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              href="https://github.com/AraceliFradejas"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-gray-800 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="GitHub"
+            >
+              <FiGithub className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              href="https://kelset-slanding.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, rotate: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-purple-600 hover:bg-purple-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="Kelse TS Group"
+            >
+              <FiExternalLink className="w-6 h-6" />
+            </motion.a>
+          </div>
         </div>
       </div>
       {/* Background Pattern */}

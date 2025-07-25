@@ -7,13 +7,6 @@ const FloatingSocial = () => {
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      icon: FiGithub,
-      url: 'https://github.com/AraceliFradejas',
-      color: '#333',
-      bgColor: '#f6f8fa'
-    },
-    {
       name: 'LinkedIn',
       icon: FiLinkedin,
       url: 'https://linkedin.com/in/araceli-fradejas',
@@ -42,7 +35,14 @@ const FloatingSocial = () => {
       bgColor: '#fef2f2'
     },
     {
-      name: 'Web',
+      name: 'GitHub',
+      icon: FiGithub,
+      url: 'https://github.com/AraceliFradejas',
+      color: '#333',
+      bgColor: '#f6f8fa'
+    },
+    {
+      name: 'Kelse TS Group',
       icon: FiGlobe,
       url: 'https://kelset-slanding.vercel.app/',
       color: '#6366f1',
