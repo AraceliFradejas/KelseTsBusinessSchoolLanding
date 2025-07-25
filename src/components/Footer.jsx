@@ -170,20 +170,36 @@ const Footer = () => {
         {/* Disclaimer and Copyright */}
         <div className="border-t border-gray-800 pt-8">
           <div className="text-center space-y-4">
-            {/* Disclaimer */}
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 max-w-4xl mx-auto">
-              <h5 className="text-secondary-500 font-semibold mb-2">Microsoft Power Up - Copilot Studio</h5>
-              <p className="text-gray-400 text-sm">
-                KelceTS is a fictional project created for the Microsoft Power Up program. 
-                This is for educational purposes only and does not represent a real product or service.
-              </p>
+            {/* Educational Disclaimer */}
+            <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-700/50 rounded-lg p-6 max-w-5xl mx-auto">
+              <h5 className="text-purple-400 font-bold text-lg mb-3 flex items-center justify-center gap-2">
+                ✨ Microsoft Power Up - Copilot Studio Challenge ✨
+              </h5>
+              <div className="space-y-3 text-gray-300">
+                <p className="font-semibold text-purple-300">
+                  KelseTS Business School Parking Inspector - Microsoft Power Up Challenge v1.0
+                </p>
+                <p className="flex items-center justify-center gap-2">
+                  Created with <span className="text-red-400 text-xl">💖</span> by a Swiftie inspired by Taylor & Travis
+                </p>
+                <p className="text-yellow-300">
+                  Demonstrating Power Platform magic ✨
+                </p>
+                <p className="text-sm text-gray-400">
+                  Educational purposes only. This is a fictional project created for the Microsoft Power Up program 
+                  and does not represent a real product or service.
+                </p>
+              </div>
             </div>
 
             {/* Copyright */}
-            <div className="text-gray-500 text-sm">
-              <p>&copy; 2025 KelceTS Business School. All rights reserved.</p>
-              <p className="mt-1">
-                Part of <a href="https://kelset-slanding.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-400 transition-colors">Kelse TS Group</a>
+            <div className="text-gray-500 text-sm space-y-2">
+              <p className="font-medium">© 2025 Araceli Fradejas - All rights reserved</p>
+              <p>
+                Part of <a href="https://kelset-slanding.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-400 transition-colors underline">Kelse TS Group</a>
+              </p>
+              <p className="text-xs text-gray-600">
+                Made with Microsoft Copilot Studio • Power Platform • React • Tailwind CSS
               </p>
             </div>
           </div>
