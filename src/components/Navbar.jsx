@@ -52,10 +52,14 @@ const Navbar = () => {
               className="h-10 w-auto"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'
+              }`}>
                 KelceTS
               </h1>
-              <p className="text-sm text-gray-600">Business School</p>
+              <p className={`text-sm transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-white/90 drop-shadow-lg'
+              }`}>Business School</p>
             </div>
           </motion.div>
 
@@ -67,7 +71,7 @@ const Navbar = () => {
                 href={item.href}
                 whileHover={{ y: -2 }}
                 className={`text-sm font-medium transition-colors duration-200 ${
-                  isScrolled ? 'text-gray-700 hover:text-primary-600' : 'text-gray-800 hover:text-primary-600'
+                  isScrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white drop-shadow-lg hover:text-primary-200'
                 }`}
               >
                 {t(`nav.${item.key}`)}
@@ -82,7 +86,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 onClick={() => setShowLanguageMenu(!showLanguageMenu)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                  isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-gray-800 hover:bg-white/20'
+                  isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white drop-shadow-lg hover:bg-white/20'
                 }`}
               >
                 <FiGlobe className="w-4 h-4" />
@@ -130,7 +134,9 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
+              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white drop-shadow-lg hover:bg-white/20'
+            }`}
           >
             {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
           </motion.button>
