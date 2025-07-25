@@ -118,7 +118,7 @@ const resources = {
       // Contact Section
       contact: {
         title: 'Ready to Transform Your Business with AI?',
-        subtitle: 'Get in touch with our admissions team',
+        subtitle: 'Get in touch with our team to discover how we can help transform your business',
         form: {
           name: 'Full Name',
           email: 'Email Address',
@@ -130,9 +130,9 @@ const resources = {
           error: 'Error sending message. Please try again.'
         },
         info: {
-          address: '123 AI Innovation Drive, Tech District, NY 10001',
-          phone: '+1 (555) 123-4567',
-          email: 'admissions@kelscts.edu'
+          address: 'Calle de Alcalá, 123, 28009 Madrid, Spain',
+          phone: '+34 91 123 45 67',
+          email: 'contact@kelsetsbs.com'
         }
       },
       // Team Section
@@ -302,7 +302,7 @@ const resources = {
       // Contact Section
       contact: {
         title: '¿Listo para Transformar tu Negocio con IA?',
-        subtitle: 'Ponte en contacto con nuestro equipo de admisiones',
+        subtitle: 'Ponte en contacto con nuestro equipo para descubrir cómo podemos ayudar a transformar tu negocio',
         form: {
           name: 'Nombre Completo',
           email: 'Correo Electrónico',
@@ -314,9 +314,9 @@ const resources = {
           error: 'Error enviando mensaje. Por favor intenta de nuevo.'
         },
         info: {
-          address: '123 AI Innovation Drive, Distrito Tecnológico, NY 10001',
-          phone: '+1 (555) 123-4567',
-          email: 'admisiones@kelscts.edu'
+          address: 'Calle de Alcalá, 123, 28009 Madrid, España',
+          phone: '+34 91 123 45 67',
+          email: 'contacto@kelsetsbs.com'
         }
       },
       // Team Section

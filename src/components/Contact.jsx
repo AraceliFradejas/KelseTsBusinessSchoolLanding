@@ -133,8 +133,9 @@ const Contact = () => {
                 Get in Touch
               </h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Ready to transform your career with AI? Our admissions team is here to help you 
-                choose the perfect program for your goals and answer any questions you may have.
+                Ready to transform your business with AI? Our expert team is here to help you 
+                understand how our AI solutions can drive growth and innovation in your organization. 
+                Contact us to schedule a consultation or learn more about our services.
               </p>
             </motion.div>
 
@@ -164,20 +165,25 @@ const Contact = () => {
 
             {/* Additional Info */}
             <motion.div variants={itemVariants} className="bg-white p-6 rounded-xl shadow-md">
-              <h4 className="font-semibold text-gray-900 mb-4">Office Hours</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Business Hours</h4>
               <div className="space-y-2 text-gray-600">
                 <div className="flex justify-between">
                   <span>Monday - Friday:</span>
-                  <span>9:00 AM - 6:00 PM EST</span>
+                  <span>9:00 AM - 7:00 PM CET</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM EST</span>
+                  <span>10:00 AM - 2:00 PM CET</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday:</span>
                   <span>Closed</span>
                 </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <p className="text-sm text-gray-500">
+                  For urgent inquiries outside business hours, email us and we'll respond within 24 hours.
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -248,7 +254,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.program')}
+                      Service of Interest
                     </label>
                     <select
                       id="program"
@@ -257,10 +263,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all duration-200"
                     >
-                      <option value="">Select a program</option>
-                      <option value="executive">AI Strategy for Executives</option>
-                      <option value="intermediate">Machine Learning for Business</option>
-                      <option value="beginner">AI Innovation Workshop</option>
+                      <option value="">Select a service</option>
+                      <option value="ai-strategy">AI Strategy Consulting</option>
+                      <option value="training">AI Training Programs</option>
+                      <option value="implementation">AI Implementation</option>
+                      <option value="automation">Business Automation</option>
+                      <option value="analytics">Data Analytics</option>
+                      <option value="other">Other Services</option>
                     </select>
                   </div>
                 </div>
@@ -277,7 +286,7 @@ const Contact = () => {
                     rows={4}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Tell us about your goals and how we can help..."
+                    placeholder="Tell us about your business needs and how we can help transform your operations with AI..."
                   />
                 </div>
 
