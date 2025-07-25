@@ -158,7 +158,7 @@ const Features = () => {
               100%
             </motion.div>
             <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
-              AI-Focused
+              {t('features.stats.aiTitle', 'AI-Focused')}
             </p>
           </div>
           
@@ -170,7 +170,7 @@ const Features = () => {
               24/7
             </motion.div>
             <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
-              Support
+              {t('features.stats.support', 'Support')}
             </p>
           </div>
           
@@ -182,7 +182,7 @@ const Features = () => {
               50+
             </motion.div>
             <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
-              Countries
+              {t('features.stats.countries', 'Countries')}
             </p>
           </div>
           
@@ -194,7 +194,7 @@ const Features = () => {
               10+
             </motion.div>
             <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
-              Years Experience
+              {t('features.stats.experience', 'Years Experience')}
             </p>
           </div>
         </motion.div>

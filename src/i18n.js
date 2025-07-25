@@ -29,6 +29,12 @@ const resources = {
         subtitle: 'We specialize exclusively in AI education for business applications',
         expandText: 'Show more',
         collapseText: 'Show less',
+        stats: {
+          aiTitle: 'AI-Focused',
+          support: 'Support',
+          countries: 'Countries',
+          experience: 'Years Experience'
+        },
         items: [
           {
             title: 'AI-Focused Curriculum',
@@ -75,7 +81,24 @@ const resources = {
             features: ['AI Fundamentals', 'Use Cases', 'Technology Trends', 'Implementation Planning']
           }
         ],
-        cta: 'View All Programs'
+        cta: 'View All Programs',
+        comparison: {
+          title: 'Program Comparison',
+          feature: 'Feature',
+          executive: 'Executive',
+          intermediate: 'Intermediate',
+          beginner: 'Beginner',
+          duration: 'Duration',
+          weeks6: '6 weeks',
+          weeks12: '12 weeks',
+          weeks4: '4 weeks',
+          prerequisites: 'Prerequisites',
+          clevel: 'C-Level',
+          basictech: 'Basic Tech',
+          none: 'None',
+          projects: 'Hands-on Projects',
+          certificate: 'Certificate'
+        }
       },
       // About Section
       about: {
@@ -213,6 +236,12 @@ const resources = {
         subtitle: 'Nos especializamos exclusivamente en educación de IA para aplicaciones empresariales',
         expandText: 'Ver más',
         collapseText: 'Contraer',
+        stats: {
+          aiTitle: 'Enfocado en IA',
+          support: 'Soporte',
+          countries: 'Países',
+          experience: 'Años de Experiencia'
+        },
         items: [
           {
             title: 'Currículo Enfocado en IA',
@@ -259,7 +288,24 @@ const resources = {
             features: ['Fundamentos de IA', 'Casos de Uso', 'Tendencias Tecnológicas', 'Planificación de Implementación']
           }
         ],
-        cta: 'Ver Todos los Programas'
+        cta: 'Ver Todos los Programas',
+        comparison: {
+          title: 'Comparación de Programas',
+          feature: 'Característica',
+          executive: 'Ejecutivo',
+          intermediate: 'Intermedio',
+          beginner: 'Principiante',
+          duration: 'Duración',
+          weeks6: '6 semanas',
+          weeks12: '12 semanas',
+          weeks4: '4 semanas',
+          prerequisites: 'Prerrequisitos',
+          clevel: 'Nivel C',
+          basictech: 'Tecnología Básica',
+          none: 'Ninguno',
+          projects: 'Proyectos Prácticos',
+          certificate: 'Certificado'
+        }
       },
       // About Section
       about: {
@@ -326,16 +372,16 @@ const resources = {
         description: 'Nuestro experimentado equipo de liderazgo aporta décadas de experiencia en IA, estrategia empresarial y educación para impulsar la innovación y la excelencia.',
         members: {
           ceo: {
-            title: 'Director Ejecutivo'
+            title: 'CEO'
           },
           cio: {
-            title: 'Director de Información'
+            title: 'CIO'
           },
           chro: {
-            title: 'Director de Recursos Humanos'
+            title: 'CHRO'
           },
           cco: {
-            title: 'Director Comercial'
+            title: 'CCO'
           }
         },
         cta: {

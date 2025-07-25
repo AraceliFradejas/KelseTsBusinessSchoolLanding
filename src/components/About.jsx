@@ -98,7 +98,7 @@ const About = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-gray-700">Founded in 2015 with a focus on AI education</span>
+                <span className="text-gray-700">Founded in 2025 with a focus on AI education</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>

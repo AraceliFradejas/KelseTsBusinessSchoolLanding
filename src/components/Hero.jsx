@@ -116,15 +116,15 @@ const Hero = () => {
             >
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
-                <div className="text-secondary-200 text-sm">Graduates</div>
+                <div className="text-secondary-200 text-sm">{t('about.stats.0.label', 'Graduates')}</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">15+</div>
-                <div className="text-secondary-200 text-sm">Partners</div>
+                <div className="text-secondary-200 text-sm">{t('about.stats.1.label', 'Partners')}</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">95%</div>
-                <div className="text-secondary-200 text-sm">Success Rate</div>
+                <div className="text-secondary-200 text-sm">{t('about.stats.2.label', 'Success Rate')}</div>
               </div>
             </motion.div>
           </motion.div>

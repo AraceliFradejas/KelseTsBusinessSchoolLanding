@@ -161,34 +161,34 @@ const Programs = () => {
           className="mt-20"
         >
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Program Comparison
+            {t('programs.comparison.title', 'Program Comparison')}
           </h3>
           
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Executive</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Intermediate</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Beginner</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">{t('programs.comparison.feature', 'Feature')}</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">{t('programs.comparison.executive', 'Executive')}</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">{t('programs.comparison.intermediate', 'Intermediate')}</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">{t('programs.comparison.beginner', 'Beginner')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">Duration</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">6 weeks</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">12 weeks</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">4 weeks</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">{t('programs.comparison.duration', 'Duration')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.weeks6', '6 weeks')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.weeks12', '12 weeks')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.weeks4', '4 weeks')}</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-sm text-gray-900">Prerequisites</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">C-Level</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Basic Tech</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">None</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">{t('programs.comparison.prerequisites', 'Prerequisites')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.clevel', 'C-Level')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.basictech', 'Basic Tech')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('programs.comparison.none', 'None')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">Hands-on Projects</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">{t('programs.comparison.projects', 'Hands-on Projects')}</td>
                   <td className="px-6 py-4 text-center">
                     <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
@@ -200,7 +200,7 @@ const Programs = () => {
                   </td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-6 py-4 text-sm text-gray-900">Certificate</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">{t('programs.comparison.certificate', 'Certificate')}</td>
                   <td className="px-6 py-4 text-center">
                     <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
