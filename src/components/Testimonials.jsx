@@ -13,6 +13,13 @@ const Testimonials = () => {
   // Generate random user avatars matching testimonial names
   useEffect(() => {
     const generateAvatars = async () => {
+      // Gender-matched fallback images
+      const fallbackImages = [
+        '/assets/ktsbs_staff_CHRO.png',  // Female for Sarah Johnson
+        '/assets/ktsbs_staff_CEO.png',   // Male for Michael Chen
+        '/assets/ktsbs_staff_CCO.webp'   // Female for Maria Rodriguez
+      ];
+      
       try {
         // Match gender with testimonial names: Sarah (F), Michael (M), Maria (F)
         const avatarConfigs = [
@@ -28,16 +35,17 @@ const Testimonials = () => {
         const responses = await Promise.all(avatarPromises);
         const userData = await Promise.all(responses.map(res => res.json()));
         
-        const avatars = userData.map(data => data.results[0].picture.large);
+        const avatars = userData.map((data, index) => {
+          if (data && data.results && data.results[0] && data.results[0].picture) {
+            return data.results[0].picture.large;
+          }
+          return fallbackImages[index]; // Use appropriate fallback
+        });
+        
         setUserAvatars(avatars);
       } catch (error) {
         console.log('Error loading avatars, using fallback');
-        // Fallback to local assets if API fails (matching genders)
-        setUserAvatars([
-          '/assets/ktsbs_staff_CHRO.png',  // Female for Sarah Johnson
-          '/assets/ktsbs_staff_CEO.png',   // Male for Michael Chen
-          '/assets/ktsbs_staff_CCO.webp'   // Female for Maria Rodriguez
-        ]);
+        setUserAvatars(fallbackImages);
       }
     };
 
@@ -164,27 +172,23 @@ const Testimonials = () => {
                       className="flex items-center justify-center space-x-4"
                     >
                       <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center shadow-lg">
-                        {userAvatars.length > 0 && userAvatars[currentIndex] ? (
-                          <img 
-                            src={userAvatars[currentIndex]} 
-                            alt={testimonials[currentIndex].name}
-                            className="w-full h-full object-cover"
-                            style={{
-                              objectPosition: 'center 30%'
-                            }}
-                            onError={(e) => {
-                              // Fallback if image fails to load
-                              e.target.style.display = 'none';
-                              e.target.nextSibling.style.display = 'flex';
-                            }}
-                          />
-                        ) : null}
-                        <div 
-                          className="w-full h-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-lg"
-                          style={{ display: userAvatars.length > 0 ? 'none' : 'flex' }}
-                        >
-                          {testimonials[currentIndex].name.charAt(0)}
-                        </div>
+                        <img 
+                          src={userAvatars[currentIndex] || '/assets/ktsbs_staff_CEO.png'} 
+                          alt={testimonials[currentIndex].name}
+                          className="w-full h-full object-cover"
+                          style={{
+                            objectPosition: 'center 30%'
+                          }}
+                          onError={(e) => {
+                            // Additional fallback if image fails
+                            const fallbacks = [
+                              '/assets/ktsbs_staff_CHRO.png',  // Female 
+                              '/assets/ktsbs_staff_CEO.png',   // Male 
+                              '/assets/ktsbs_staff_CCO.webp'   // Female 
+                            ];
+                            e.target.src = fallbacks[currentIndex] || '/assets/ktsbs_staff_CEO.png';
+                          }}
+                        />
                       </div>
                       <div className="text-left">
                         <h4 className="font-semibold text-gray-900 text-lg">
@@ -263,27 +267,23 @@ const Testimonials = () => {
               
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center shadow-md overflow-hidden">
-                  {userAvatars.length > 0 && userAvatars[index] ? (
-                    <img 
-                      src={userAvatars[index]} 
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                      style={{
-                        objectPosition: 'center 30%'
-                      }}
-                      onError={(e) => {
-                        // Fallback if image fails to load
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
-                      }}
-                    />
-                  ) : null}
-                  <div 
-                    className="w-full h-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-xs"
-                    style={{ display: userAvatars.length > 0 ? 'none' : 'flex' }}
-                  >
-                    {testimonial.name.charAt(0)}
-                  </div>
+                  <img 
+                    src={userAvatars[index] || '/assets/ktsbs_staff_CEO.png'} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                    style={{
+                      objectPosition: 'center 30%'
+                    }}
+                    onError={(e) => {
+                      // Additional fallback if image fails
+                      const fallbacks = [
+                        '/assets/ktsbs_staff_CHRO.png',  // Female 
+                        '/assets/ktsbs_staff_CEO.png',   // Male 
+                        '/assets/ktsbs_staff_CCO.webp'   // Female 
+                      ];
+                      e.target.src = fallbacks[index] || '/assets/ktsbs_staff_CEO.png';
+                    }}
+                  />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">
