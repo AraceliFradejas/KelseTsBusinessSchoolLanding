@@ -21,7 +21,7 @@ const resources = {
         subtitle: 'Leading Business School specialized in Artificial Intelligence applications for modern enterprises',
         description: 'Transform your career and business with cutting-edge AI education. Join the leaders of tomorrow at KelceTS Business School.',
         ctaPrimary: 'Explore Programs',
-        ctaSecondary: 'Watch Video',
+        ctaSecondary: 'Watch Full Video',
         videoPlaceholder: '[Hero Video Placeholder - Add your promotional video here]'
       },
       // Features Section
@@ -287,7 +287,7 @@ const resources = {
         subtitle: 'Escuela de Negocios líder especializada en aplicaciones de Inteligencia Artificial para empresas modernas',
         description: 'Transforma tu carrera y negocio con educación de vanguardia en IA. Únete a los líderes del futuro en KelceTS Business School.',
         ctaPrimary: 'Explorar Programas',
-        ctaSecondary: 'Ver Video',
+        ctaSecondary: 'Ver Video Completo',
         videoPlaceholder: '[Marcador de Video del Hero - Agrega tu video promocional aquí]'
       },
       // Features Section  

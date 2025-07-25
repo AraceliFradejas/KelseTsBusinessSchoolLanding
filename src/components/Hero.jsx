@@ -99,14 +99,17 @@ const Hero = () => {
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
-              <motion.button
+              <motion.a
+                href="https://share.synthesia.io/b365d0e3-1353-4017-9d54-d68bac7759df"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-outline text-white border-white hover:bg-white hover:text-primary-600 flex items-center justify-center space-x-2 group"
               >
                 <FiPlay className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>{t('hero.ctaSecondary')}</span>
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Stats */}
@@ -136,28 +139,29 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            {/* Video Placeholder */}
+            {/* Video Synthesia */}
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-              <div className="video-placeholder bg-white/10 backdrop-blur-sm border-white/20 text-white">
-                <div className="text-center">
-                  <FiPlay className="w-16 h-16 mx-auto mb-4 opacity-80" />
-                  <p className="text-lg font-medium mb-2">Hero Video</p>
-                  <p className="text-sm opacity-80 max-w-xs mx-auto">
-                    {t('hero.videoPlaceholder')}
-                  </p>
-                </div>
+              <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1920/1080' }}>
+                <iframe 
+                  src="https://share.synthesia.io/embeds/videos/b365d0e3-1353-4017-9d54-d68bac7759df" 
+                  loading="lazy" 
+                  title="KelceTS Business School - AI Education Introduction" 
+                  allowFullScreen 
+                  allow="encrypted-media; fullscreen; autoplay" 
+                  style={{ 
+                    position: 'absolute', 
+                    width: '100%', 
+                    height: '100%', 
+                    top: 0, 
+                    left: 0, 
+                    border: 'none', 
+                    padding: 0, 
+                    margin: 0, 
+                    overflow: 'hidden',
+                    borderRadius: '1rem'
+                  }}
+                />
               </div>
-              
-              {/* Play Button Overlay */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors"
-              >
-                <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                  <FiPlay className="w-8 h-8 text-primary-600 ml-1" />
-                </div>
-              </motion.button>
             </div>
 
             {/* Floating Elements */}
