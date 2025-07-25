@@ -8,7 +8,7 @@ import {
   FiLinkedin, 
   FiTwitter, 
   FiYoutube, 
-  FiInstagram,
+  FiEdit3,
   FiArrowUp,
   FiExternalLink,
   FiGithub
@@ -53,18 +53,18 @@ const Footer = () => {
               <FiTwitter className="w-6 h-6" />
             </motion.a>
             <motion.a
-              href="https://instagram.com/araceli.fradejas"
+              href="https://medium.com/@araceli.fradejas"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-pink-600 hover:bg-pink-100 shadow-lg hover:shadow-xl transition-all duration-300"
-              title="Instagram"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-green-600 hover:bg-green-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              title="Medium"
             >
-              <FiInstagram className="w-6 h-6" />
+              <FiEdit3 className="w-6 h-6" />
             </motion.a>
             <motion.a
-              href="https://youtube.com/@aracelif"
+              href="https://www.youtube.com/@KelseTS"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, rotate: -5 }}

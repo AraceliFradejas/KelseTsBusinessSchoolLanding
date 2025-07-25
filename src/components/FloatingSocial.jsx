@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiShare2, FiX, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiYoutube, FiGlobe } from 'react-icons/fi';
+import { FiShare2, FiX, FiGithub, FiLinkedin, FiTwitter, FiEdit3, FiYoutube, FiGlobe } from 'react-icons/fi';
 
 const FloatingSocial = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +21,16 @@ const FloatingSocial = () => {
       bgColor: '#e7f7ff'
     },
     {
-      name: 'Instagram',
-      icon: FiInstagram,
-      url: 'https://instagram.com/araceli.fradejas',
-      color: '#e4405f',
-      bgColor: '#fef2f2'
+      name: 'Medium',
+      icon: FiEdit3,
+      url: 'https://medium.com/@araceli.fradejas',
+      color: '#00ab6c',
+      bgColor: '#f0fdf4'
     },
     {
       name: 'YouTube',
       icon: FiYoutube,
-      url: 'https://youtube.com/@aracelif',
+      url: 'https://www.youtube.com/@KelseTS',
       color: '#ff0000',
       bgColor: '#fef2f2'
     },
