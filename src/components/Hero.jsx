@@ -172,7 +172,7 @@ const Hero = () => {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-              className="absolute -bottom-6 -left-6 w-20 h-20 bg-accent-500/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white text-xl"
+              className="absolute -bottom-6 -left-6 w-20 h-20 bg-primary-500/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white text-xl"
             >
               🤖
             </motion.div>

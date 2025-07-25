@@ -33,7 +33,7 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
             variants={containerVariants}
@@ -123,7 +123,7 @@ const About = () => {
             <div className="relative">
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
               >
                 <img 
                   src="/assets/ktsbs0.png"
@@ -180,6 +180,9 @@ const About = () => {
                   src="/assets/1 carreer.png" 
                   alt="Career 1" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  style={{
+                    objectPosition: 'center 30%'
+                  }}
                 />
               </div>
               <div className="aspect-square rounded-lg overflow-hidden">
@@ -187,6 +190,9 @@ const About = () => {
                   src="/assets/2 carreer.png" 
                   alt="Career 2" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  style={{
+                    objectPosition: 'center 30%'
+                  }}
                 />
               </div>
               <div className="aspect-square rounded-lg overflow-hidden">
@@ -194,6 +200,9 @@ const About = () => {
                   src="/assets/3 carreer.png" 
                   alt="Career 3" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  style={{
+                    objectPosition: 'center 30%'
+                  }}
                 />
               </div>
             </motion.div>

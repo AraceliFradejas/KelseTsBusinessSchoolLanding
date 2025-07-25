@@ -45,8 +45,8 @@ const FloatingSocial = () => {
       name: 'Web',
       icon: FiGlobe,
       url: 'https://kelset-slanding.vercel.app/',
-      color: '#f59e0b',
-      bgColor: '#fffbeb'
+      color: '#6366f1',
+      bgColor: '#f0f9ff'
     }
   ];
 

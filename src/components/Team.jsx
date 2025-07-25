@@ -104,9 +104,9 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover"
                     style={{
-                      objectPosition: 'center 20%' // Enfoque en la cara
+                      objectPosition: 'center 30%' // Ajustado para no cortar cabezas
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent group-hover:from-primary-600/20 transition-all duration-300"></div>

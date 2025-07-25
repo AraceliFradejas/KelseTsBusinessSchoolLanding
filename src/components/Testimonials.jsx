@@ -87,9 +87,6 @@ const Testimonials = () => {
                 className="absolute inset-0"
               >
                 <div className="h-full bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
-                  {/* Background decoration */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary-100 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
                   
                   {/* Quote icon */}
                   <motion.div

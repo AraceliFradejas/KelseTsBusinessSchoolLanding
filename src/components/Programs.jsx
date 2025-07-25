@@ -58,7 +58,7 @@ const Programs = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {t('programs.title')}
@@ -80,7 +80,7 @@ const Programs = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="card p-8 relative overflow-hidden group"
+              className="card p-6 relative overflow-hidden group"
             >
               {/* Program Image */}
               <div className="relative mb-6 overflow-hidden rounded-lg">
@@ -88,13 +88,13 @@ const Programs = () => {
                   src={programImages[index % programImages.length]} 
                   alt={program.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  style={{
+                    objectPosition: 'center 35%' // Ajustado para mostrar mejor las caras
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-300 opacity-30"></div>
-              
               <div className="relative z-10">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
