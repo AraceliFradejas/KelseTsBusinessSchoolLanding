@@ -22,7 +22,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-16 relative overflow-hidden">
+    <footer className="bg-black text-white pt-0 pb-16 relative overflow-hidden">
+      {/* Franja naranjita de redes sociales */}
+      <div className="w-full bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 py-4 flex flex-col md:flex-row items-center justify-center gap-4 shadow-lg z-20">
+        <span className="font-bold text-white text-lg tracking-wide mr-4">Síguenos:</span>
+        <div className="flex gap-3">
+          <a href="https://linkedin.com/in/araceli-fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="LinkedIn"><FiLinkedin className="w-5 h-5" /></a>
+          <a href="https://twitter.com/araceli_fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Twitter"><FiTwitter className="w-5 h-5" /></a>
+          <a href="https://instagram.com/araceli.fradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Instagram"><FiInstagram className="w-5 h-5" /></a>
+          <a href="https://youtube.com/@aracelif" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="YouTube"><FiYoutube className="w-5 h-5" /></a>
+          <a href="https://github.com/AraceliFradejas" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="GitHub"><FiGithub className="w-5 h-5" /></a>
+          <a href="https://kelset-slanding.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white text-orange-600 hover:text-orange-800 shadow transition-colors" title="Web"><FiExternalLink className="w-5 h-5" /></a>
+        </div>
+      </div>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -98,73 +110,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media Links */}
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex gap-4">
-              <motion.a
-                href="https://linkedin.com/in/araceli-fradejas"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <FiLinkedin className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://twitter.com/aracelif"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <FiTwitter className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://github.com/AraceliFradejas"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <FiGithub className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://youtube.com/@aracelif"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <FiYoutube className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://instagram.com/aracelif"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
-              >
-                <FiInstagram className="w-5 h-5" />
-              </motion.a>
-            </div>
-
-            {/* Back to Top Button */}
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-            >
-              <FiArrowUp className="w-4 h-4" />
-              Back to Top
-            </motion.button>
-          </div>
+        {/* Back to Top Button */}
+        <div className="flex justify-center mt-8 mb-8">
+          <motion.button
+            onClick={scrollToTop}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 text-orange-400 hover:text-orange-600 transition-colors font-semibold text-lg"
+          >
+            <FiArrowUp className="w-4 h-4" />
+            Volver arriba
+          </motion.button>
         </div>
 
         {/* Disclaimer and Copyright */}
