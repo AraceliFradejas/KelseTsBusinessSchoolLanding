@@ -73,14 +73,14 @@ const Hero = () => {
 
             <motion.p 
               variants={itemVariants}
-              className="text-xl md:text-2xl text-blue-100 mb-4 font-light"
+              className="text-xl md:text-2xl text-secondary-200 mb-4 font-light"
             >
               {t('hero.subtitle')}
             </motion.p>
 
             <motion.p 
               variants={itemVariants}
-              className="text-lg text-blue-200 mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg text-secondary-100 mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               {t('hero.description')}
             </motion.p>
@@ -116,15 +116,15 @@ const Hero = () => {
             >
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
-                <div className="text-blue-200 text-sm">Graduates</div>
+                <div className="text-secondary-200 text-sm">Graduates</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">15+</div>
-                <div className="text-blue-200 text-sm">Partners</div>
+                <div className="text-secondary-200 text-sm">Partners</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-white">95%</div>
-                <div className="text-blue-200 text-sm">Success Rate</div>
+                <div className="text-secondary-200 text-sm">Success Rate</div>
               </div>
             </motion.div>
           </motion.div>

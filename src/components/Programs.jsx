@@ -38,13 +38,13 @@ const Programs = () => {
     switch (level.toLowerCase()) {
       case 'executive':
       case 'ejecutivo':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-black text-white';
       case 'intermediate':
       case 'intermedio':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-primary-600 text-secondary-400';
       case 'beginner':
       case 'principiante':
-        return 'bg-green-100 text-green-800';
+        return 'bg-secondary-500 text-primary-600';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -129,8 +129,8 @@ const Programs = () => {
                 <div className="space-y-3 mb-8">
                   {program.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
-                      <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
-                        <FiCheck className="w-3 h-3 text-green-600" />
+                      <div className="flex-shrink-0 w-5 h-5 bg-primary-600 rounded-full flex items-center justify-center">
+                        <FiCheck className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
@@ -138,35 +138,18 @@ const Programs = () => {
                 </div>
 
                 {/* CTA */}
-                <motion.button
+                <motion.a
+                  href="#contact"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full btn-primary flex items-center justify-center space-x-2 group"
                 >
                   <span>Learn More</span>
                   <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary inline-flex items-center space-x-2 group"
-          >
-            <span>{t('programs.cta')}</span>
-            <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
         </motion.div>
 
         {/* Program Comparison Table */}
@@ -207,25 +190,25 @@ const Programs = () => {
                 <tr>
                   <td className="px-6 py-4 text-sm text-gray-900">Hands-on Projects</td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 text-sm text-gray-900">Certificate</td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <FiCheck className="w-5 h-5 text-green-600 mx-auto" />
+                    <FiCheck className="w-5 h-5 bg-primary-600 text-white rounded-full p-1 mx-auto" />
                   </td>
                 </tr>
               </tbody>

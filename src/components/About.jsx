@@ -156,12 +156,12 @@ const About = () => {
                 className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <FiStar className="w-5 h-5 text-blue-600" />
+                  <div className="w-10 h-10 bg-secondary-100 rounded-full flex items-center justify-center">
+                    <FiStar className="w-5 h-5 text-secondary-600" />
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-gray-900">Rating</div>
-                    <div className="text-lg font-bold text-blue-600">4.9/5</div>
+                    <div className="text-lg font-bold text-secondary-600">4.9/5</div>
                   </div>
                 </div>
               </motion.div>

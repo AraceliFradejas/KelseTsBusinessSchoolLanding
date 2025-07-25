@@ -10,7 +10,7 @@ const SocialMedia = () => {
       name: 'LinkedIn', 
       icon: FiLinkedin, 
       url: 'https://linkedin.com/in/araceli-fradejas', 
-      color: 'bg-blue-600 hover:bg-blue-700',
+      color: 'bg-primary-600 hover:bg-primary-700',
       delay: 0.1
     },
     { 
