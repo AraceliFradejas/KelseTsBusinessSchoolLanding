@@ -12,7 +12,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Team from './components/Team';
 import Footer from './components/Footer';
-import FloatingSocial from './components/FloatingSocial';
+import SocialMediaWidget from './components/SocialMediaWidget';
 
 function App() {
   const { i18n } = useTranslation();
@@ -37,7 +37,7 @@ function App() {
           } />
         </Routes>
         <Footer />
-        <FloatingSocial />
+        <SocialMediaWidget />
       </div>
     </Router>
   );
