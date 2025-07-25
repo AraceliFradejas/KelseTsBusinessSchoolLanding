@@ -60,7 +60,7 @@ const Hero = () => {
           >
             <motion.div variants={itemVariants} className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                🤖 AI Education Leader
+                🤖 {t('hero.badge', 'AI Education Leader')}
               </span>
             </motion.div>
 

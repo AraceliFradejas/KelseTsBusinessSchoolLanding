@@ -144,7 +144,7 @@ const Programs = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full btn-primary flex items-center justify-center space-x-2 group"
                 >
-                  <span>Learn More</span>
+                  <span>{t('programs.learnMore', 'Learn More')}</span>
                   <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
               </div>

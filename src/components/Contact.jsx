@@ -64,17 +64,17 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: FiMapPin,
-      label: 'Address',
+      label: t('contact.labels.address', 'Address'),
       value: t('contact.info.address')
     },
     {
       icon: FiPhone,
-      label: 'Phone',
+      label: t('contact.labels.phone', 'Phone'),
       value: t('contact.info.phone')
     },
     {
       icon: FiMail,
-      label: 'Email',
+      label: t('contact.labels.email', 'Email'),
       value: t('contact.info.email')
     }
   ];
@@ -130,12 +130,10 @@ const Contact = () => {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Get in Touch
+                {t('contact.getInTouch', 'Get in Touch')}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Ready to transform your business with AI? Our expert team is here to help you 
-                understand how our AI solutions can drive growth and innovation in your organization. 
-                Contact us to schedule a consultation or learn more about our services.
+                {t('contact.description', 'Ready to transform your business with AI? Our expert team is here to help you understand how our AI solutions can drive growth and innovation in your organization. Contact us to schedule a consultation or learn more about our services.')}
               </p>
             </motion.div>
 
@@ -165,24 +163,24 @@ const Contact = () => {
 
             {/* Additional Info */}
             <motion.div variants={itemVariants} className="bg-white p-6 rounded-xl shadow-md">
-              <h4 className="font-semibold text-gray-900 mb-4">Business Hours</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">{t('contact.businessHours', 'Business Hours')}</h4>
               <div className="space-y-2 text-gray-600">
                 <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>9:00 AM - 7:00 PM CET</span>
+                  <span>{t('contact.mondayFriday', 'Monday - Friday')}:</span>
+                  <span>{t('contact.mondayFridayHours', '9:00 AM - 7:00 PM CET')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 2:00 PM CET</span>
+                  <span>{t('contact.saturday', 'Saturday')}:</span>
+                  <span>{t('contact.saturdayHours', '10:00 AM - 2:00 PM CET')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>Closed</span>
+                  <span>{t('contact.sunday', 'Sunday')}:</span>
+                  <span>{t('contact.sundayHours', 'Closed')}</span>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
-                  For urgent inquiries outside business hours, email us and we'll respond within 24 hours.
+                  {t('contact.urgentNote', 'For urgent inquiries outside business hours, email us and we\'ll respond within 24 hours.')}
                 </p>
               </div>
             </motion.div>
@@ -197,7 +195,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a Message
+                {t('contact.sendMessage', 'Send us a Message')}
               </h3>
 
               {/* Form Fields */}
@@ -254,7 +252,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service of Interest
+                      {t('contact.form.serviceOfInterest', 'Service of Interest')}
                     </label>
                     <select
                       id="program"
@@ -263,13 +261,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all duration-200"
                     >
-                      <option value="">Select a service</option>
-                      <option value="ai-strategy">AI Strategy Consulting</option>
-                      <option value="training">AI Training Programs</option>
-                      <option value="implementation">AI Implementation</option>
-                      <option value="automation">Business Automation</option>
-                      <option value="analytics">Data Analytics</option>
-                      <option value="other">Other Services</option>
+                      <option value="">{t('contact.form.selectService', 'Select a service')}</option>
+                      <option value="ai-strategy">{t('contact.form.services.aiStrategy', 'AI Strategy Consulting')}</option>
+                      <option value="training">{t('contact.form.services.training', 'AI Training Programs')}</option>
+                      <option value="implementation">{t('contact.form.services.implementation', 'AI Implementation')}</option>
+                      <option value="automation">{t('contact.form.services.automation', 'Business Automation')}</option>
+                      <option value="analytics">{t('contact.form.services.analytics', 'Data Analytics')}</option>
+                      <option value="other">{t('contact.form.services.other', 'Other Services')}</option>
                     </select>
                   </div>
                 </div>
@@ -286,7 +284,7 @@ const Contact = () => {
                     rows={4}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Tell us about your business needs and how we can help transform your operations with AI..."
+                    placeholder={t('contact.form.messagePlaceholder', 'Tell us about your business needs and how we can help transform your operations with AI...')}
                   />
                 </div>
 

@@ -43,7 +43,7 @@ const About = () => {
           >
             <motion.div variants={itemVariants} className="mb-6">
               <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-medium">
-                About KelceTS
+                {t('about.badge', 'About KelceTS')}
               </span>
             </motion.div>
 
@@ -98,15 +98,15 @@ const About = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-gray-700">Founded in 2025 with a focus on AI education</span>
+                <span className="text-gray-700">{t('about.facts.founded', 'Founded in 2025 with a focus on AI education')}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-gray-700">Partnerships with leading tech companies</span>
+                <span className="text-gray-700">{t('about.facts.partnerships', 'Partnerships with leading tech companies')}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-gray-700">Alumni network spanning 50+ countries</span>
+                <span className="text-gray-700">{t('about.facts.alumni', 'Alumni network spanning 50+ countries')}</span>
               </div>
             </motion.div>
           </motion.div>
@@ -143,7 +143,7 @@ const About = () => {
                     <FiTrendingUp className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">Success Rate</div>
+                    <div className="text-sm font-semibold text-gray-900">{t('about.successRate.label', 'Success Rate')}</div>
                     <div className="text-lg font-bold text-green-600">95%</div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const About = () => {
                     <FiStar className="w-5 h-5 text-secondary-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">Rating</div>
+                    <div className="text-sm font-semibold text-gray-900">{t('about.rating.label', 'Rating')}</div>
                     <div className="text-lg font-bold text-secondary-600">4.9/5</div>
                   </div>
                 </div>
@@ -221,10 +221,9 @@ const About = () => {
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
               <FiTrendingUp className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.mission.title', 'Our Mission')}</h3>
             <p className="text-gray-600 leading-relaxed">
-              To bridge the gap between cutting-edge AI technology and practical business applications, 
-              empowering professionals and organizations to thrive in the AI-driven future.
+              {t('about.mission.description', 'To bridge the gap between cutting-edge AI technology and practical business applications, empowering professionals and organizations to thrive in the AI-driven future.')}
             </p>
           </div>
 
@@ -232,10 +231,9 @@ const About = () => {
             <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
               <FiStar className="w-6 h-6 text-secondary-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.vision.title', 'Our Vision')}</h3>
             <p className="text-gray-600 leading-relaxed">
-              To be the global leader in AI business education, creating a world where every professional 
-              has the knowledge and skills to leverage artificial intelligence for positive impact.
+              {t('about.vision.description', 'To be the global leader in AI business education, creating a world where every professional has the knowledge and skills to leverage artificial intelligence for positive impact.')}
             </p>
           </div>
         </motion.div>

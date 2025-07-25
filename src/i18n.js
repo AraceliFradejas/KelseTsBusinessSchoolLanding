@@ -16,6 +16,7 @@ const resources = {
       },
       // Hero Section
       hero: {
+        badge: 'AI Education Leader',
         title: 'Master AI for Business Excellence',
         subtitle: 'Leading Business School specialized in Artificial Intelligence applications for modern enterprises',
         description: 'Transform your career and business with cutting-edge AI education. Join the leaders of tomorrow at KelceTS Business School.',
@@ -82,6 +83,7 @@ const resources = {
           }
         ],
         cta: 'View All Programs',
+        learnMore: 'Learn More',
         comparison: {
           title: 'Program Comparison',
           feature: 'Feature',
@@ -102,16 +104,60 @@ const resources = {
       },
       // About Section
       about: {
+        badge: 'About KelceTS',
         title: 'About KelceTS Business School',
         subtitle: 'Pioneering AI Education for Business Excellence',
         description: 'Founded with the vision of bridging the gap between artificial intelligence technology and business applications, KelceTS Business School has become the premier destination for professionals seeking to master AI in business contexts.',
         stats: [
-          { number: '500+', label: 'Graduates' },
-          { number: '15+', label: 'Industry Partners' },
-          { number: '95%', label: 'Job Placement Rate' },
-          { number: '4.9/5', label: 'Student Rating' }
+          { number: '2K+', label: 'Students Graduated' },
+          { number: '50+', label: 'Specialized Courses' },
+          { number: '95%', label: 'Success Rate' },
+          { number: '4.9/5', label: 'Average Rating' }
         ],
-        imagePlaceholder: '[About Image Placeholder - Add team or campus image here]'
+        facts: {
+          founded: 'Founded in 2025 with a focus on AI education',
+          partnerships: 'Partnerships with leading tech companies',
+          alumni: 'Alumni network spanning 50+ countries'
+        },
+        successRate: {
+          label: 'Success Rate'
+        },
+        rating: {
+          label: 'Rating'
+        },
+        mission: {
+          title: 'Our Mission',
+          description: 'To bridge the gap between cutting-edge AI technology and practical business applications, empowering professionals and organizations to thrive in the AI-driven future.'
+        },
+        vision: {
+          title: 'Our Vision',
+          description: 'To be the global leader in AI business education, creating a world where every professional has the knowledge and skills to leverage artificial intelligence for positive impact.'
+        }
+      },
+      // Team Section
+      team: {
+        badge: 'Our Team',
+        title: 'Meet Our Professional Team',
+        description: 'Our experienced leadership team brings decades of expertise in AI, business strategy, and education to drive innovation and excellence.',
+        members: {
+          ceo: {
+            title: 'Chief Executive Officer'
+          },
+          cio: {
+            title: 'Chief Information Officer'
+          },
+          chro: {
+            title: 'Chief Human Resources Officer'
+          },
+          cco: {
+            title: 'Chief Commercial Officer'
+          }
+        },
+        cta: {
+          title: 'Ready to Learn from the Best?',
+          description: 'Join thousands of professionals who have transformed their careers with our AI education programs.',
+          button: 'Get Started Today'
+        }
       },
       // Testimonials Section
       testimonials: {
@@ -142,67 +188,80 @@ const resources = {
       contact: {
         title: 'Ready to Transform Your Business with AI?',
         subtitle: 'Get in touch with our team to discover how we can help transform your business',
+        getInTouch: 'Get in Touch',
+        description: 'Ready to transform your business with AI? Our expert team is here to help you understand how our AI solutions can drive growth and innovation in your organization. Contact us to schedule a consultation or learn more about our services.',
+        sendMessage: 'Send us a Message',
+        businessHours: 'Business Hours',
+        mondayFriday: 'Monday - Friday',
+        mondayFridayHours: '9:00 AM - 7:00 PM CET',
+        saturday: 'Saturday',
+        saturdayHours: '10:00 AM - 2:00 PM CET',
+        sunday: 'Sunday',
+        sundayHours: 'Closed',
+        urgentNote: 'For urgent inquiries outside business hours, email us and we\'ll respond within 24 hours.',
+        labels: {
+          address: 'Address',
+          phone: 'Phone',
+          email: 'Email'
+        },
         form: {
           name: 'Full Name',
           email: 'Email Address',
           phone: 'Phone Number',
-          program: 'Program of Interest',
+          serviceOfInterest: 'Service of Interest',
+          selectService: 'Select a service',
+          services: {
+            aiStrategy: 'AI Strategy Consulting',
+            training: 'AI Training Programs',
+            implementation: 'AI Implementation',
+            automation: 'Business Automation',
+            analytics: 'Data Analytics',
+            other: 'Other Services'
+          },
           message: 'Message',
+          messagePlaceholder: 'Tell us about your business needs and how we can help transform your operations with AI...',
           submit: 'Send Message',
-          success: 'Message sent successfully! We will contact you soon.',
+          success: 'Message sent successfully! We\'ll contact you soon.',
           error: 'Error sending message. Please try again.'
         },
         info: {
-          address: 'Calle de Alcalá, 123, 28009 Madrid, Spain',
+          address: 'Calle de Alcalá, 123, 28009 Madrid, España',
           phone: '+34 91 123 45 67',
-          email: 'contact@kelsetsbs.com'
+          email: 'contacto@kelsetsbs.com'
         }
       },
-      // Team Section
-      team: {
-        badge: 'Our Team',
-        title: 'Meet Our Professional Team',
-        description: 'Our experienced leadership team brings decades of expertise in AI, business strategy, and education to drive innovation and excellence.',
-        members: {
-          ceo: {
-            title: 'Chief Executive Officer'
-          },
-          cio: {
-            title: 'Chief Information Officer'
-          },
-          chro: {
-            title: 'Chief Human Resources Officer'
-          },
-          cco: {
-            title: 'Chief Commercial Officer'
-          }
-        },
-        cta: {
-          title: 'Ready to Learn from the Best?',
-          description: 'Join thousands of professionals who have transformed their careers with our AI education programs.',
-          button: 'Get Started Today'
-        }
-      },
-      // Footer
+      // Footer Section
       footer: {
-        description: 'Leading the future of AI education for business professionals worldwide.',
-        links: {
-          programs: 'Programs',
-          admissions: 'Admissions',
-          careers: 'Careers',
-          news: 'News',
-          privacy: 'Privacy Policy',
-          terms: 'Terms of Service'
+        quickLinks: 'Quick Links',
+        contactInfo: 'Contact Info',
+        backToTop: 'Back to top',
+        description: 'Empowering the future through AI education. Join us to transform your career with the most in-demand skills in the digital economy.',
+        rights: 'All rights reserved.',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+        contact: 'Contact',
+        disclaimer: {
+          title: 'Educational Disclaimer',
+          text: 'KelceTS Business School is a private educational institution specializing in technology and innovation. We are not affiliated with any public higher education institutions in Spain.'
         },
-        social: {
-          linkedin: 'LinkedIn',
-          twitter: 'Twitter',
+        socialMedia: {
+          title: 'Follow Us',
           youtube: 'YouTube',
-          instagram: 'Instagram'
+          twitter: 'X (Twitter)',
+          instagram: 'Instagram',
+          linkedin: 'LinkedIn',
+          facebook: 'Facebook'
+        },
+        navigation: {
+          home: 'Home',
+          about: 'About',
+          programs: 'Programs',
+          team: 'Team',
+          contact: 'Contact'
         },
         newsletter: {
           title: 'Stay Updated',
-          description: 'Subscribe to our newsletter for the latest AI business insights',
+          description: 'Subscribe to our newsletter for the latest updates on AI education and business innovation.',
           placeholder: 'Enter your email',
           button: 'Subscribe'
         },
@@ -217,53 +276,54 @@ const resources = {
       nav: {
         home: 'Inicio',
         programs: 'Programas',
-        about: 'Nosotros',
+        about: 'Acerca de',
         contact: 'Contacto',
         language: 'Idioma'
       },
       // Hero Section
       hero: {
+        badge: 'Líder en Educación de IA',
         title: 'Domina la IA para la Excelencia Empresarial',
         subtitle: 'Escuela de Negocios líder especializada en aplicaciones de Inteligencia Artificial para empresas modernas',
-        description: 'Transforma tu carrera y negocio con educación de vanguardia en IA. Únete a los líderes del mañana en KelceTS Business School.',
+        description: 'Transforma tu carrera y negocio con educación de vanguardia en IA. Únete a los líderes del futuro en KelceTS Business School.',
         ctaPrimary: 'Explorar Programas',
         ctaSecondary: 'Ver Video',
-        videoPlaceholder: '[Video Hero Placeholder - Agrega tu video promocional aquí]'
+        videoPlaceholder: '[Marcador de Video del Hero - Agrega tu video promocional aquí]'
       },
-      // Features Section
+      // Features Section  
       features: {
-        title: '¿Por qué elegir KelceTS Business School?',
+        title: '¿Por Qué Elegir KelceTS Business School?',
         subtitle: 'Nos especializamos exclusivamente en educación de IA para aplicaciones empresariales',
         expandText: 'Ver más',
-        collapseText: 'Contraer',
+        collapseText: 'Ver menos',
         stats: {
-          aiTitle: 'Enfocado en IA',
+          aiTitle: 'Enfoque en IA',
           support: 'Soporte',
           countries: 'Países',
           experience: 'Años de Experiencia'
         },
         items: [
           {
-            title: 'Currículo Enfocado en IA',
+            title: 'Currículum Enfocado en IA',
             description: 'Programas integrales diseñados específicamente para aplicaciones de inteligencia artificial en entornos empresariales.'
           },
           {
             title: 'Expertos de la Industria',
-            description: 'Aprende de los principales profesionales de IA y expertos en negocios con experiencia del mundo real.'
+            description: 'Aprende de profesionales líderes en IA y negocios con experiencia del mundo real.'
           },
           {
             title: 'Aprendizaje Práctico',
-            description: 'Proyectos prácticos y casos de estudio que te preparan para la implementación inmediata en tu negocio.'
+            description: 'Proyectos prácticos y casos de estudio que te preparan para implementación inmediata en tu negocio.'
           },
           {
             title: 'Red Global',
-            description: 'Conecta con profesionales de IA y líderes empresariales de todo el mundo.'
+            description: 'Conéctate con profesionales de IA y líderes empresariales de todo el mundo.'
           }
         ]
       },
       // Programs Section
       programs: {
-        title: 'Nuestros Programas de IA Empresarial',
+        title: 'Nuestros Programas de IA para Negocios',
         subtitle: 'Rutas educativas especializadas diseñadas para diferentes necesidades empresariales',
         items: [
           {
@@ -277,7 +337,7 @@ const resources = {
             title: 'Machine Learning para Negocios',
             duration: '12 semanas',
             level: 'Intermedio',
-            description: 'Aplicaciones prácticas de machine learning para profesionales empresariales.',
+            description: 'Aplicaciones prácticas de machine learning para profesionales de negocios.',
             features: ['Análisis de Datos', 'Modelos Predictivos', 'Inteligencia de Negocios', 'Herramientas de Automatización']
           },
           {
@@ -289,6 +349,7 @@ const resources = {
           }
         ],
         cta: 'Ver Todos los Programas',
+        learnMore: 'Conoce Más',
         comparison: {
           title: 'Comparación de Programas',
           feature: 'Característica',
@@ -301,7 +362,7 @@ const resources = {
           weeks4: '4 semanas',
           prerequisites: 'Prerrequisitos',
           clevel: 'Nivel C',
-          basictech: 'Tecnología Básica',
+          basictech: 'Tech Básico',
           none: 'Ninguno',
           projects: 'Proyectos Prácticos',
           certificate: 'Certificado'
@@ -309,39 +370,83 @@ const resources = {
       },
       // About Section
       about: {
-        title: 'Acerca de KelceTS Business School',
-        subtitle: 'Pioneros en Educación de IA para la Excelencia Empresarial',
-        description: 'Fundada con la visión de cerrar la brecha entre la tecnología de inteligencia artificial y las aplicaciones empresariales, KelceTS Business School se ha convertido en el destino principal para profesionales que buscan dominar la IA en contextos empresariales.',
+        badge: 'Acerca de KelceTS',
+        title: 'Pioneros en Educación de IA para Negocios',
+        subtitle: 'Transformando el futuro de la educación empresarial a través de la inteligencia artificial',
+        description: 'En KelceTS Business School, combinamos décadas de experiencia empresarial con las últimas innovaciones en IA para ofrecer una educación transformadora que prepara a los líderes del futuro.',
         stats: [
-          { number: '500+', label: 'Graduados' },
-          { number: '15+', label: 'Socios de la Industria' },
-          { number: '95%', label: 'Tasa de Colocación Laboral' },
-          { number: '4.9/5', label: 'Calificación Estudiantil' }
+          { number: '2K+', label: 'Estudiantes Graduados' },
+          { number: '50+', label: 'Cursos Especializados' },
+          { number: '95%', label: 'Tasa de Éxito' },
+          { number: '4.9/5', label: 'Calificación Promedio' }
         ],
-        imagePlaceholder: '[Imagen Acerca Placeholder - Agrega imagen del equipo o campus aquí]'
+        facts: {
+          founded: 'Fundada en 2025 con enfoque en educación de IA',
+          partnerships: 'Alianzas con empresas tecnológicas líderes',
+          alumni: 'Red de egresados en más de 50 países'
+        },
+        successRate: {
+          label: 'Tasa de Éxito'
+        },
+        rating: {
+          label: 'Calificación'
+        },
+        mission: {
+          title: 'Nuestra Misión',
+          description: 'Cerrar la brecha entre la tecnología de IA de vanguardia y las aplicaciones empresariales prácticas, empoderando a profesionales y organizaciones para prosperar en el futuro impulsado por IA.'
+        },
+        vision: {
+          title: 'Nuestra Visión',
+          description: 'Ser el líder global en educación empresarial de IA, creando un mundo donde cada profesional tenga el conocimiento y las habilidades para aprovechar la inteligencia artificial para un impacto positivo.'
+        }
+      },
+      // Team Section
+      team: {
+        badge: 'Nuestro Equipo',
+        title: 'Conoce a Nuestro Equipo Profesional',
+        description: 'Nuestro experimentado equipo directivo aporta décadas de experiencia en IA, estrategia empresarial y educación para impulsar la innovación y la excelencia.',
+        members: {
+          ceo: {
+            title: 'Director Ejecutivo'
+          },
+          cio: {
+            title: 'Director de Información'
+          },
+          chro: {
+            title: 'Director de Recursos Humanos'
+          },
+          cco: {
+            title: 'Director Comercial'
+          }
+        },
+        cta: {
+          title: '¿Listo para Aprender de los Mejores?',
+          description: 'Únete a miles de profesionales que han transformado sus carreras con nuestros programas de educación en IA.',
+          button: 'Comienza Hoy'
+        }
       },
       // Testimonials Section
       testimonials: {
-        title: 'Lo que Dicen Nuestros Estudiantes',
+        title: 'Lo Que Dicen Nuestros Estudiantes',
         subtitle: 'Historias de éxito de líderes empresariales en IA',
         items: [
           {
             name: 'Sarah Johnson',
             role: 'Directora de IA, TechCorp',
             content: 'El programa de Estrategia de IA transformó cómo abordamos la tecnología en nuestra organización. Los insights prácticos fueron inmediatamente aplicables.',
-            image: '[Imagen Estudiante Placeholder 1]'
+            image: '[Marcador de Imagen de Estudiante 1]'
           },
           {
             name: 'Michael Chen',
             role: 'Gerente de Ciencia de Datos, InnovateCo',
-            content: 'KelceTS proporcionó la combinación perfecta de conocimiento técnico y perspicacia empresarial. Altamente recomendado para cualquier profesional.',
-            image: '[Imagen Estudiante Placeholder 2]'
+            content: 'KelceTS proporcionó la mezcla perfecta de conocimiento técnico y perspicacia empresarial. Altamente recomendado para cualquier profesional.',
+            image: '[Marcador de Imagen de Estudiante 2]'
           },
           {
-            name: 'María Rodriguez',
+            name: 'Maria Rodriguez',
             role: 'CEO, StartupAI',
-            content: 'La red y el conocimiento que obtuve en KelceTS fueron fundamentales para lanzar mi startup enfocada en IA.',
-            image: '[Imagen Estudiante Placeholder 3]'
+            content: 'La red y el conocimiento que gané en KelceTS fueron fundamentales para lanzar mi startup enfocada en IA.',
+            image: '[Marcador de Imagen de Estudiante 3]'
           }
         ]
       },
@@ -349,12 +454,38 @@ const resources = {
       contact: {
         title: '¿Listo para Transformar tu Negocio con IA?',
         subtitle: 'Ponte en contacto con nuestro equipo para descubrir cómo podemos ayudar a transformar tu negocio',
+        getInTouch: 'Ponte en Contacto',
+        description: '¿Listo para transformar tu negocio con IA? Nuestro equipo experto está aquí para ayudarte a entender cómo nuestras soluciones de IA pueden impulsar el crecimiento y la innovación en tu organización. Contáctanos para programar una consulta o aprender más sobre nuestros servicios.',
+        sendMessage: 'Envíanos un Mensaje',
+        businessHours: 'Horario de Atención',
+        mondayFriday: 'Lunes - Viernes',
+        mondayFridayHours: '9:00 AM - 7:00 PM CET',
+        saturday: 'Sábado',
+        saturdayHours: '10:00 AM - 2:00 PM CET',
+        sunday: 'Domingo',
+        sundayHours: 'Cerrado',
+        urgentNote: 'Para consultas urgentes fuera del horario de atención, envíanos un email y responderemos en 24 horas.',
+        labels: {
+          address: 'Dirección',
+          phone: 'Teléfono',
+          email: 'Email'
+        },
         form: {
           name: 'Nombre Completo',
           email: 'Correo Electrónico',
           phone: 'Número de Teléfono',
-          program: 'Programa de Interés',
+          serviceOfInterest: 'Servicio de Interés',
+          selectService: 'Selecciona un servicio',
+          services: {
+            aiStrategy: 'Consultoría en Estrategia de IA',
+            training: 'Programas de Entrenamiento en IA',
+            implementation: 'Implementación de IA',
+            automation: 'Automatización de Negocios',
+            analytics: 'Análisis de Datos',
+            other: 'Otros Servicios'
+          },
           message: 'Mensaje',
+          messagePlaceholder: 'Cuéntanos sobre las necesidades de tu negocio y cómo podemos ayudarte a transformar tus operaciones con IA...',
           submit: 'Enviar Mensaje',
           success: '¡Mensaje enviado exitosamente! Te contactaremos pronto.',
           error: 'Error enviando mensaje. Por favor intenta de nuevo.'
@@ -365,51 +496,38 @@ const resources = {
           email: 'contacto@kelsetsbs.com'
         }
       },
-      // Team Section
-      team: {
-        badge: 'Nuestro Equipo',
-        title: 'Conoce Nuestro Equipo Profesional',
-        description: 'Nuestro experimentado equipo de liderazgo aporta décadas de experiencia en IA, estrategia empresarial y educación para impulsar la innovación y la excelencia.',
-        members: {
-          ceo: {
-            title: 'CEO'
-          },
-          cio: {
-            title: 'CIO'
-          },
-          chro: {
-            title: 'CHRO'
-          },
-          cco: {
-            title: 'CCO'
-          }
-        },
-        cta: {
-          title: '¿Listo para Aprender de los Mejores?',
-          description: 'Únete a miles de profesionales que han transformado sus carreras con nuestros programas de educación en IA.',
-          button: 'Comienza Hoy'
-        }
-      },
-      // Footer
+      // Footer Section
       footer: {
-        description: 'Liderando el futuro de la educación en IA para profesionales empresariales en todo el mundo.',
-        links: {
-          programs: 'Programas',
-          admissions: 'Admisiones',
-          careers: 'Carreras',
-          news: 'Noticias',
-          privacy: 'Política de Privacidad',
-          terms: 'Términos de Servicio'
+        quickLinks: 'Enlaces Rápidos',
+        contactInfo: 'Información de Contacto',
+        backToTop: 'Volver arriba',
+        description: 'Empoderando el futuro a través de la educación en IA. Únete a nosotros para transformar tu carrera con las habilidades más demandadas en la economía digital.',
+        rights: 'Todos los derechos reservados.',
+        privacy: 'Política de Privacidad',
+        terms: 'Términos de Servicio',
+        contact: 'Contacto',
+        disclaimer: {
+          title: 'Descargo de Responsabilidad Educativa',
+          text: 'KelceTS Business School es una institución educativa privada especializada en tecnología e innovación. No estamos afiliados con ninguna institución pública de educación superior en España.'
         },
-        social: {
-          linkedin: 'LinkedIn',
-          twitter: 'Twitter',
+        socialMedia: {
+          title: 'Síguenos',
           youtube: 'YouTube',
-          instagram: 'Instagram'
+          twitter: 'X (Twitter)',
+          instagram: 'Instagram',
+          linkedin: 'LinkedIn',
+          facebook: 'Facebook'
+        },
+        navigation: {
+          home: 'Inicio',
+          about: 'Acerca de',
+          programs: 'Programas',
+          team: 'Equipo',
+          contact: 'Contacto'
         },
         newsletter: {
           title: 'Mantente Actualizado',
-          description: 'Suscríbete a nuestro newsletter para las últimas perspectivas de IA empresarial',
+          description: 'Suscríbete a nuestro boletín para las últimas actualizaciones sobre educación en IA e innovación empresarial.',
           placeholder: 'Ingresa tu email',
           button: 'Suscribirse'
         },

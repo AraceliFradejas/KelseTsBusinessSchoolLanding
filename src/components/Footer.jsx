@@ -145,18 +145,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">{t('footer.quickLinks', 'Quick Links')}</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-              <li><a href="#programs" className="text-gray-400 hover:text-white transition-colors">Programs</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">{t('nav.home', 'Home')}</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">{t('nav.about', 'About Us')}</a></li>
+              <li><a href="#programs" className="text-gray-400 hover:text-white transition-colors">{t('nav.programs', 'Programs')}</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">{t('nav.contact', 'Contact')}</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">{t('footer.contactInfo', 'Contact Info')}</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <FiMail className="w-4 h-4 text-primary-500" />
@@ -183,7 +183,7 @@ const Footer = () => {
             className="flex items-center gap-2 text-orange-400 hover:text-orange-600 transition-colors font-semibold text-lg"
           >
             <FiArrowUp className="w-4 h-4" />
-            Volver arriba
+            {t('footer.backToTop', 'Volver arriba')}
           </motion.button>
         </div>
 
